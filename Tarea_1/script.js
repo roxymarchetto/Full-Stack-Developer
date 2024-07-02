@@ -54,3 +54,14 @@ function validateEmail(email) {
         const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(String(email).toLowerCase());
 }}
+
+function changeFormStyles() {
+    const formulario = document.getElementById('formulario');
+    if (formulario.style.backgroundColor !== 'green'){
+        formulario.style.backgroundColor = 'green';
+    } else {
+        formulario.style.backgroundColor = '#ffffff';
+    }
+}
+
+document.getElementById('changeStyleButton').addEventListener('click', changeFormStyles);
